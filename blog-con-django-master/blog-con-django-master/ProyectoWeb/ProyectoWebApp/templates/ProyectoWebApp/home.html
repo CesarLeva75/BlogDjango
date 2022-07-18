@@ -1,0 +1,127 @@
+{% extends 'ProyectoWebApp/base.html' %}
+{%load static%}
+{%block content%}
+    <link href="{% static 'ProyectoWebApp/blog.css' %}" rel="stylesheet">
+
+<section class="top">
+  <header class="hd border-buttom">
+    <div class="containern">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li class={% if request.path == '/home/' %} active {% endif %}><a href="{% url 'Home' %}" class="nav-link px-2">Inicio</a></li>
+          <li class={% if request.path == '/categorias/' %} active {% endif %}><a href="{% url 'Categorias' %}" class="nav-link px-2">Categorias</a></li>
+      
+        </ul>
+        
+
+        <form action= "/resultado_busqueda/" method= "GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+      
+          <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search" name="nombre">
+
+        </form>    
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://www.pngkit.com/png/full/940-9406687_already-a-proact-user-employee-icon-white-png.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">Nueva publicación</a></li>
+            <li><a class="dropdown-item" href='/profile/'>Mi perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            {% if request.user.is_authenticated %}
+            <li><a class="dropdown-item" href="/logout/">Cerrar Sesión</a></li>
+            {% else %}
+            <li><a class="dropdown-item" href="/login/">Iniciar Sesión</a></li>
+            <li><a class="dropdown-item" href="/register/">Crear Cuenta</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+</header>
+
+  <div class="bc p-4 p-md-5 rounded"> 
+    <img class= "imag" src="{% static 'ProyectoWebApp/img.png' %}">
+    <div class="colt">
+       
+      <h1 class="display-4 fst-italic">BLOG INFO 2021</h1>
+      <a href="#seccion-2">Introducción</a>
+    </div>
+  </div>
+  <div class="wave">
+    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+  </div>
+</section>
+<section id="seccion-2">
+<main class="container">
+  
+
+  <div class="bodyblog">
+    <div >
+        
+    <img  src="https://economiasustentable.com/wp-content/uploads/2021/09/Banner-ODS.jpeg">
+        
+      <article class="blog-post">
+        <h1 class="blog-post-title">Mundo: Entra en vigor la nueva Agenda de Desarrollo Sostenible</h1>
+        <p class="blog-post-meta">1 de enero de 2016 </a></p>
+
+        <h3>Contiene diecisiete Objetivos de Desarrollo Sostenible (ODS) que reemplazan a los ocho Objetivos de Desarrollo del Milenio (ODM).</h3>
+        <hr>
+        <p class="presentacion">Desde el 1 de enero de 2016 entró en vigor oficialmente la Agenda 2030 para el Desarrollo Sostenible que durante los próximos 15 años marcará la pauta para construir un mundo más justo y equitativo para toda la población, además de velar por el medio ambiente.<br>
+
+          La Agenda, aprobada por los 193 Estados miembros de la ONU en septiembre pasado, está compuesta por 17 Objetivos de Desarrollo Sostenible (ODS), entre los que destacan la erradicación de la pobreza y el hambre, la consecución de educación y servicios médicos universales y la protección de los ecosistemas marinos y terrestres.<br>
+          
+          “Los 17 Objetivos de Desarrollo Sostenible son nuestra visión compartida de la humanidad y un contrato social entre los líderes del mundo y las personas” dijo el Secretario General de la ONU, Ban Ki-moon.<br>
+          
+          Los ODS abordan las necesidades de las personas de los países desarrollados y en desarrollo, haciendo hincapié en que no debe dejarse a nadie atrás.<br>
+          
+          La Agenda integra las dimensiones social, económica y ambiental del desarrollo sostenible, y atiende aspectos relacionados con la paz, la justicia y las instituciones eficaces.<br>
+          
+          La movilización de medios de aplicación, entre ellos recursos financieros, desarrollo y transferencia de tecnología y desarrollo de la capacidad, así como el papel de las alianzas, también se reconocen como esenciales.<br>
+          
+          Para la puesta en marcha del nuevo plan, Ban Ki-moon subrayó que hacer realidad la Agenda es responsabilidad principalmente de los países, pero agregó que también requerirá nuevas alianzas y solidaridad internacional.<br>
+          
+          El examen de los avances se llevará a cabo periódicamente en cada país, con la sociedad civil, las empresas y los representantes de varios grupos de interés.<br>
+          
+          A nivel regional, los países compartirán experiencias y tratarán asuntos comunes, mientras que con carácter anual en ONU, el Foro Político de Alto Nivel sobre el Desarrollo Sostenible (FPAN) hará un balance de los progresos a nivel mundial, identificando las deficiencias y cuestiones emergentes y recomendando medidas correctoras.</p>
+        <hr>
+        <h3>Pueblos indígenas esperan mejorar sus condiciones de vida</h3>
+        <p>Los pueblos indígenas consideran que la Agenda de Desarrollo Sostenible para 2030 puede contribuir a mejorar sus condiciones de vida y a que se reconozcan con más firmeza sus derechos, pero eso requerirá más respaldo a sus reivindicaciones y un acopio de información más rigurosa sobre esas comunidades.<br>
+
+          Un grupo de expertos debatió en las Naciones Unidas esas y otras cuestiones relacionadas con los asuntos que más preocupan a las poblaciones indígenas y entre ellas a las más de 800 comunidades de América Latina y el Caribe.<br>
+          
+          Fabiana del Popolo, experta de la División de Población de la Comisión Económica para América Latina y el Caribe (CEPAL) afirmó en declaraciones a Radio ONU que la agenda adoptada por los Estados miembros el 25 de septiembre supone un avance respecto de los objetivos que se plantearon para los últimos quince años.</p>
+        <img src="{% static 'ProyectoWebApp/fd.png' %}">
+       
+          
+          <p>Sin embargo, Del Popolo destacó que aún mucho por hacer en cuanto al reconocimiento pleno de los derechos indígenas.<br>
+
+            “A diferencia de los Objetivos de Desarrollo del Milenio (ODM) que no hacían ninguna mención a los pueblos indígenas, por lo menos en algunos Objetivos los pueblos indígenas son ahora mencionados. Antes estaban invisibles, manifestó la experta.<br>
+            
+            "Sin embargo, no es suficiente y no recoge las aspiraciones de los pueblos indígenas sobre todo en lo relativo a sus derechos colectivos. Hay que ver como se incluye en la implementación de los ODS el reconocimiento de los derechos colectivos que ya están consagrados en los estándares internacionales”, agregó.<br>
+            
+            Explicó que en una región tan diversa como la latinoamericana, los marcos jurídicos de los países también reflejan las diferencias entre países en la atención de las cuestiones indígenas, así como en los fondos que se asignan para implementar políticas que les afectan.<br>
+            
+            Señaló no obstante que hay una característica común a toda la región y es el progresivo fortalecimiento de las organizaciones indígenas y las demandas coincidentes que plantean.<br>
+            
+            Fabiana del Popolo destacó también la importancia que da la CEPAL a la inclusión de la identidad propia de los pueblos indígenas en los censos de población y otras bases de datos y agregó que esa es una reivindicación insistente de las comunidades en América Latina y el Caribe.</p>
+       
+        
+        
+      </article>
+
+
+      <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary" href="#">volver al inicio</a>
+      </nav>
+
+    </div>
+
+    
+        
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+{% endblock %}

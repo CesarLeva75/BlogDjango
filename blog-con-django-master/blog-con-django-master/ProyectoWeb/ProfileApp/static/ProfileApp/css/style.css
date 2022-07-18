@@ -1,0 +1,219 @@
+/*GENERAL STYLE*/
+
+body {
+    font-family: 'Open Sans', serif;
+    padding-top: 54px;
+    color: #000000;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 0;
+        padding-left: 17rem;
+    }
+}
+
+
+h1 {
+    font-size: 6rem;
+    line-height: 5.5rem;
+    color: rgb(0, 0, 0);
+    
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+p{
+    color: rgb(77, 77, 77);
+}
+
+.subheading {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Saira Extra Condensed', serif;
+    font-size: 1.35rem;
+}
+
+/*==================================================
+                  SOCIAL-ICON
+====================================================*/
+  .list-social-icons a {
+      color: #36096d;
+  }
+
+  .list-social-icons a:hover {
+      color: #7546ad85;
+  }
+
+  .list-social-icons a .fa-lg {
+      font-size: 1.75rem;
+  }
+
+  .list-icons {
+      font-size: 3rem;
+  }
+
+  .list-icons .list-inline-item i:hover {
+      color: #ffffff;
+  }
+
+/*==================================================
+                    NAV-BAR
+====================================================*/
+  #sideNav .navbar-nav .nav-item .nav-link {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: rgb(0, 0, 0);
+  }
+
+  @media (min-width: 992px) {
+      #sideNav {
+          text-align: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          width: 17rem;
+          height: 100vh;
+      }
+      #sideNav .navbar-brand {
+          display: flex;
+          margin: auto auto 0;
+          padding: 0.5rem;
+      }
+      #sideNav .navbar-brand .img-profile {
+          max-width: 10rem;
+          max-height: 10rem;
+          border: 0.5rem solid #36096d;
+      }
+      #sideNav .navbar-collapse {
+          display: flex;
+          align-items: flex-start;
+          flex-grow: 0;
+          width: 100%;
+          margin-bottom: auto;
+      }
+      #sideNav .navbar-collapse .navbar-nav {
+          flex-direction: column;
+          width: 100%;
+      }
+      #sideNav .navbar-collapse .navbar-nav .nav-item {
+          display: block;
+      }
+      #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+          display: block;
+      }
+  }
+
+/*==================================================
+                  SECTION (Generic)
+====================================================*/
+  .heading-border {
+      width: 60px;
+      height: 10px;
+      background-color: #2196f3;
+      margin: 0 auto 20px auto;
+  }
+
+  section.resume-section {
+      border-bottom: 1px solid #dee2e6;
+      padding-top: 5rem !important;
+      padding-bottom: 5rem !important;
+  }
+
+  section.resume-section .resume-item .resume-date {
+      min-width: none;
+  }
+
+  @media (min-width: 768px) {
+      section.resume-section {
+          min-height: 100vh;
+      }
+      section.resume-section .resume-item .resume-date {
+          min-width: 18rem;
+      }
+  }
+
+  @media (min-width: 992px) {
+      section.resume-section {
+          padding-top: 3rem !important;
+          padding-bottom: 3rem !important;
+      }
+  }
+
+ #sideNav{
+    background-color: #7546ad85;
+ }
+
+  .text-primary {
+      color: #2196f3 !important;
+  }
+
+/*==================================================
+                      ABOUT
+====================================================*/
+#about {
+    background-color:#7546ad85;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    font-family: 'Open Sans'
+    
+  
+  }
+
+ 
+
+/*==================================================
+                    EXPERIENCE
+====================================================*/  
+  #experience {
+    background: #ffffff;
+    margin-top: 500px;
+  }
+
+  #experience .card h4{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: none;
+  }
+
+.mb-0, .mb-5{
+    padding-left: 70px;
+}
+.mb-5{
+    padding-top: 10px;
+}
+.heading-border{
+    background-color: #36096d;
+}
+
+.list-inline{
+    margin-left: 70px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav-back a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 30px;
+    width: 150px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 15px;
+  }
+
+  .nav-back a:hover{
+    text-decoration: none;
+    background-color: #36096d;
+    color: rgb(255, 255, 255);
+    
+  }
